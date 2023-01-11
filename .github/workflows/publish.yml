@@ -24,10 +24,10 @@ jobs:
         with:
           version: 7.5.0
 
-      # - name: Set publishing config
-      #   run: pnpm config set '//registry.npmjs.org/:_authToken' "${NODE_AUTH_TOKEN}"
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Set publishing config
+        run: pnpm config set '//registry.npmjs.org/:_authToken' "${NODE_AUTH_TOKEN}"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -36,5 +36,4 @@ jobs:
         run: pnpm run build
 
       - name: Publish package
-        run: pnpm publish --dry-run
-      # - run: pnpm publish --access public
+        run: pnpm publish --access public
