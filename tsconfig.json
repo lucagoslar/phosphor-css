@@ -1,0 +1,19 @@
+{
+	"ts-node": {
+		"files": true
+	},
+	"compilerOptions": {
+		"baseUrl": "./",
+		"paths": {
+			"@src/*": ["src/*"]
+		},
+		"rootDirs": ["./src"],
+		"types": ["node", "jest", "ts-jest"],
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"skipLibCheck": true
+	},
+	"include": ["src"]
+}
