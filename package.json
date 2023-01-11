@@ -1,7 +1,7 @@
 {
 	"name": "phosphor-css",
 	"version": "1.0.0",
-	"description": "",
+	"description": "🧩 CSS integration of a flexible icon family for the web.",
 	"files": [
 		"assets",
 		"css",
@@ -20,7 +20,15 @@
 		"type": "git",
 		"url": "git+https://github.com/lucagoslar/phosphor-css.git"
 	},
-	"keywords": [],
+	"keywords": [
+		"phosphor",
+		"phosphor-icons",
+		"icons",
+		"sass",
+		"css",
+		"less",
+		"scss"
+	],
 	"author": "Luca Goslar <47827429+lucagoslar@users.noreply.github.com>",
 	"devDependencies": {
 		"@types/csso": "^5.0.0",
