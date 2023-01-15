@@ -1,6 +1,6 @@
 import fs from 'fs-extra';
 import sass from 'sass';
-import less from 'less';
+// import less from 'less';
 
 // https://lesscss.org/usage/
 // https://sass-lang.com/documentation/js-api/
@@ -9,7 +9,7 @@ const icons: Array<string> = fs.readdirSync('core/assets/regular');
 const weights: Array<string> = fs.readdirSync('core/assets');
 
 // * copy icons
-for (let weight of weights) {
+for (const weight of weights) {
 	fs.copy('core/assets/' + weight, 'assets/' + weight, { overwrite: true });
 }
 
@@ -29,7 +29,7 @@ fs.copySync('src/templates/scss/index.scss', 'sass/index.scss', {
 fs.appendFileSync('sass/index.scss', '\n');
 
 // append styles
-for (let icon of icons) {
+for (const icon of icons) {
 	fs.appendFileSync(
 		'sass/index.scss',
 		'@include icon(' + icon.split('.')[0] + ');\n'
@@ -43,7 +43,7 @@ fs.copySync('src/templates/scss/single__weight.scss', 'sass/regular.scss', {
 
 fs.appendFileSync('sass/regular.scss', '\n');
 
-for (let icon of icons) {
+for (const icon of icons) {
 	fs.appendFileSync(
 		'sass/regular.scss',
 		'@include regularWeightIcon(' + icon.split('.')[0] + ');\n'
@@ -51,7 +51,7 @@ for (let icon of icons) {
 }
 
 // ** other weights
-for (let weight of weights) {
+for (const weight of weights) {
 	if (weight == 'regular') continue;
 
 	fs.copySync(
@@ -65,7 +65,7 @@ for (let weight of weights) {
 	fs.appendFileSync('sass/' + weight + '.scss', '\n');
 	fs.appendFileSync('sass/' + weight + '.scss', '$weight: ' + weight + ';\n\n');
 
-	for (let icon of icons) {
+	for (const icon of icons) {
 		fs.appendFileSync(
 			'sass/' + weight + '.scss',
 			'@include icon(' + icon.split('.')[0] + ');\n'
@@ -79,7 +79,7 @@ for (let weight of weights) {
 fs.writeFileSync('css/index.css', sass.compile('sass/index.scss').css);
 
 // ** other weights
-for (let weight of weights) {
+for (const weight of weights) {
 	fs.writeFileSync(
 		'css/' + weight + '.css',
 		sass.compile('sass/' + weight + '.scss').css
@@ -99,7 +99,7 @@ fs.copySync('src/templates/less/index.less', 'less/index.less', {
 fs.appendFileSync('less/index.less', '\n');
 
 // ** multi-weight
-for (let icon of icons) {
+for (const icon of icons) {
 	const iconName = icon.split('.')[0];
 
 	fs.appendFileSync(
@@ -115,7 +115,7 @@ fs.copySync('src/templates/less/single__weight.less', 'less/regular.less', {
 
 fs.appendFileSync('less/regular.less', '\n');
 
-for (let icon of icons) {
+for (const icon of icons) {
 	const iconName = icon.split('.')[0];
 
 	fs.appendFileSync(
@@ -125,7 +125,7 @@ for (let icon of icons) {
 }
 
 // ** other weights
-for (let weight of weights) {
+for (const weight of weights) {
 	if (weight == 'regular') continue;
 
 	fs.copySync(
@@ -139,7 +139,7 @@ for (let weight of weights) {
 	fs.appendFileSync('less/' + weight + '.less', '\n');
 	fs.appendFileSync('less/' + weight + '.less', '@weight: ' + weight + ';\n\n');
 
-	for (let icon of icons) {
+	for (const icon of icons) {
 		const iconName = icon.split('.')[0];
 
 		fs.appendFileSync(

@@ -1,10 +1,10 @@
-@import (less) "base.less";
+@import (less) 'base.less';
 
 @weights: bold, duotone, fill, light, thin;
 
 .icon(@type) {
-  background-image: url("@{phosphor-icons}/regular/@{type}.svg");
-  each(@weights, {
+	background-image: url('@{phosphor-icons}/regular/@{type}.svg');
+	each(@weights, {
     &.@{value} {
       background-image: url("@{phosphor-icons}/@{value}/@{type}-@{value}.svg");
     }
