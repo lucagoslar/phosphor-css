@@ -21,7 +21,7 @@ npm i phosphor-css
 
 ## Usage
 
-By default, icons are the size of 1.5rem (24px). `width`, `height` and `line-height` can be modified when targetting the `ph` class.
+By default, icons are the size of 1.5rem (24px). `width`, `height`, `background-color` (final icon colour) and `line-height` can be modified when targetting `.ph.icon`.
 
 ```css
 @import 'phosphor-css/css/index.css';
@@ -33,12 +33,12 @@ By default, icons are the size of 1.5rem (24px). `width`, `height` and `line-hei
 
 ```html
 <!-- regular -->
-<i class="ph heart" />
+<i class="ph icon heart" />
 ```
 
 ```html
 <!-- bold -->
-<i class="ph heart bold" />
+<i class="ph icon heart bold" />
 ```
 
 ## License

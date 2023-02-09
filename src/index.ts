@@ -104,7 +104,7 @@ for (const icon of icons) {
 
 	fs.appendFileSync(
 		'less/index.less',
-		'.ph.' + iconName + ' { .icon(' + iconName + '); }\n'
+		'.ph.icon.' + iconName + ' { .icon(' + iconName + '); }\n'
 	);
 }
 
@@ -120,7 +120,7 @@ for (const icon of icons) {
 
 	fs.appendFileSync(
 		'less/regular.less',
-		'.ph { .regularWeightIcon(' + iconName + '); }\n'
+		'.ph.icon { .regularWeightIcon(' + iconName + '); }\n'
 	);
 }
 
@@ -144,7 +144,7 @@ for (const weight of weights) {
 
 		fs.appendFileSync(
 			'less/' + weight + '.less',
-			'.ph { .icon(' + iconName + '); }\n'
+			'.ph.icon { .icon(' + iconName + '); }\n'
 		);
 	}
 }

@@ -3,11 +3,13 @@
 $weights: bold, duotone, fill, light, thin;
 
 @mixin icon($type) {
-	.ph.#{$type} {
-		background-image: url('#{$phosphor-icons}/regular/#{$type}.svg');
+	.ph.icon.#{$type} {
+		mask-image: url('#{$phosphor-icons}/regular/#{$type}.svg');
+		-webkit-mask-image: url('#{$phosphor-icons}/regular/#{$type}.svg');
 		@each $weight in $weights {
 			&.#{$weight} {
-				background-image: url('#{$phosphor-icons}/#{$weight}/#{$type}-#{$weight}.svg');
+				mask-image: url('#{$phosphor-icons}/#{$weight}/#{$type}-#{$weight}.svg');
+				-webkit-mask-image: url('#{$phosphor-icons}/#{$weight}/#{$type}-#{$weight}.svg');
 			}
 		}
 	}

@@ -2,12 +2,14 @@
 
 .regularWeightIcon(@type) {
 	&.@{type} {
-		background-image: url('@{phosphor-icons}/regular/@{type}.svg');
+		mask-image: url('@{phosphor-icons}/regular/@{type}.svg');
+		-webkit-mask-image: url('@{phosphor-icons}/regular/@{type}.svg');
 	}
 }
 
 .icon(@type) {
 	&.@{type}.@{weight} {
-		background-image: url('@{phosphor-icons}/@{weight}/@{type}-@{weight}.svg');
+		mask-image: url('@{phosphor-icons}/@{weight}/@{type}-@{weight}.svg');
+		-webkit-mask-image: url('@{phosphor-icons}/@{weight}/@{type}-@{weight}.svg');
 	}
 }

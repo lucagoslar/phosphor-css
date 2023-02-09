@@ -3,10 +3,12 @@
 @weights: bold, duotone, fill, light, thin;
 
 .icon(@type) {
-	background-image: url('@{phosphor-icons}/regular/@{type}.svg');
+	mask-image: url('@{phosphor-icons}/regular/@{type}.svg');
+	-webkit-mask-image: url('@{phosphor-icons}/regular/@{type}.svg');
 	each(@weights, {
     &.@{value} {
-      background-image: url("@{phosphor-icons}/@{value}/@{type}-@{value}.svg");
+      mask-image: url("@{phosphor-icons}/@{value}/@{type}-@{value}.svg");
+      -webkit-mask-image: url("@{phosphor-icons}/@{value}/@{type}-@{value}.svg");
     }
   });
 }
