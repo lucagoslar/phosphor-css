@@ -1,6 +1,6 @@
 {
 	"name": "phosphor-css",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"description": "🧩 CSS integration of a flexible icon family for the web.",
 	"files": [
 		"assets",
@@ -10,7 +10,7 @@
 		"README.md",
 		"LICENSE"
 	],
-	"license": "EUPL-1.2",
+	"license": "MIT",
 	"scripts": {
 		"build": "ts-node src/index",
 		"test": "jest",
