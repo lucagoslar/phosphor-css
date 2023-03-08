@@ -1,6 +1,6 @@
 {
 	"name": "phosphor-css",
-	"version": "2.0.2",
+	"version": "3.0.0",
 	"description": "🧩 CSS integration of a flexible icon family for the web.",
 	"files": [
 		"assets",
