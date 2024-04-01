@@ -12,6 +12,7 @@
 	],
 	"license": "MIT",
 	"scripts": {
+		"release": "pnpm build && pnpx @changesets/cli publish",
 		"build": "ts-node src/index",
 		"test": "jest",
 		"prepare": "husky install",
@@ -32,6 +33,7 @@
 	],
 	"author": "Luca Goslar <47827429+lucagoslar@users.noreply.github.com>",
 	"devDependencies": {
+		"@changesets/cli": "^2.27.1",
 		"@types/csso": "^5.0.0",
 		"@types/fs-extra": "^11.0.1",
 		"@types/jest": "^29.2.5",
