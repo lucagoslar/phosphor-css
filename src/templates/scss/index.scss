@@ -3,7 +3,7 @@
 $weights: bold, duotone, fill, light, thin;
 
 @mixin icon($type) {
-	.ph.icon.#{$type} {
+	.ph.icon.#{"#{$type}"} {
 		mask-image: url('#{$phosphor-icons}/regular/#{$type}.svg');
 		-webkit-mask-image: url('#{$phosphor-icons}/regular/#{$type}.svg');
 		@each $weight in $weights {

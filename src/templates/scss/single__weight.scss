@@ -1,14 +1,14 @@
 @import 'base';
 
 @mixin regularWeightIcon($type) {
-	.ph.icon.#{$type} {
+	.ph.icon.#{"#{$type}"} {
 		mask-image: url('#{$phosphor-icons}/regular/#{$type}.svg');
 		-webkit-mask-image: url('#{$phosphor-icons}/regular/#{$type}.svg');
 	}
 }
 
 @mixin icon($type) {
-	.ph.icon.#{$type}.#{$weight} {
+	.ph.icon.#{"#{$type}"}.#{"#{$weight}"} {
 		mask-image: url('#{$phosphor-icons}/#{$weight}/#{$type}-#{$weight}.svg');
 		-webkit-mask-image: url('#{$phosphor-icons}/#{$weight}/#{$type}-#{$weight}.svg');
 	}
