@@ -1,11 +1,11 @@
-name: build package and run tests
+name: Test
 
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths:
-      - '.github/workflows/main.yml'
+      - '.github/workflows/test.yml'
       - 'src/**'
       - 'package.json'
       - 'tsconfig.*'
@@ -13,26 +13,23 @@ on:
     branches: [main]
 
 jobs:
-  build-and-run-tests:
+  test:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
 
-      - name: Install Node.js
-        uses: actions/setup-node@v3
+      - name: Setup Node.js 20.x
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20.x
 
-      - uses: pnpm/action-setup@v3
-        name: Install pnpm
-        id: pnpm-install
+      - uses: pnpm/action-setup@v3.0.0
         with:
-          version: 8
-          run_install: false
+          version: 8.15.4
 
       - name: Get pnpm store directory
         id: pnpm-cache
@@ -48,11 +45,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Install dependencies
-        run: pnpm install
+      - run: pnpm install
 
-      - name: Build package
-        run: pnpm run build
+      - run: pnpm build
 
-      - name: Test package
-        run: pnpm run test
+      - run: pnpm test

@@ -1,8 +1,8 @@
 ## phosphor-css
 
-Unlike `phosphor-icons`, `phosphor-css` isn't loading any fonts. Instead, CSS is loaded, and SVG icons are requested when required. It is possible to load a multi- or single-weight CSS file (e.g. "regular" or "fill"), allowing for even more performant use.
+Unlike `phosphor-icons`, `phosphor-css` isn't loading any fonts. Instead, CSS is loaded, and SVG icons are requested when required. It is possible to load a multi- or single-weight CSS file (e.g. "regular" or "fill"), allowing for even more efficient use.
 
-[![build package and run tests](https://github.com/lucagoslar/phosphor-css/actions/workflows/main.yml/badge.svg)](https://github.com/lucagoslar/phosphor-css/actions/workflows/main.yml)
+[![build package and run tests](https://github.com/lucagoslar/phosphor-css/actions/workflows/test.yml/badge.svg)](https://github.com/lucagoslar/phosphor-css/actions/workflows/test.yml)
 
 ## Index
 
