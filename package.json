@@ -12,7 +12,7 @@
 	],
 	"license": "MIT",
 	"scripts": {
-		"release": "pnpm build && pnpx @changesets/cli publish",
+		"release": "pnpx @changesets/cli publish",
 		"build": "ts-node src/index",
 		"test": "jest",
 		"prepare": "husky install",
