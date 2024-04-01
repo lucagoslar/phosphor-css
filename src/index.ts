@@ -10,11 +10,11 @@ const weights: Array<string> = fs.readdirSync('core/assets');
 
 // * copy icons
 for (const weight of weights) {
-	fs.copy('core/assets/' + weight, 'assets/' + weight, { overwrite: true });
+	fs.copySync('core/assets/' + weight, 'assets/' + weight, { overwrite: true });
 }
 
 // * copy license
-fs.copy('core/LICENSE', 'assets/LICENSE', { overwrite: true });
+fs.copySync('core/LICENSE', 'assets/LICENSE', { overwrite: true });
 
 // * sass
 fs.copySync('src/templates/scss/base.scss', 'sass/base.scss', {
